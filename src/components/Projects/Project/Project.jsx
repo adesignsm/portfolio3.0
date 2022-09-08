@@ -9,7 +9,7 @@ const Project = () => {
 
     const getRepos = async () => {
         const octokit = new Octokit({
-            auth: process.env.REACT_APP_TOKEN
+            auth: process.env.REACT_APP_SECRET
         });
 
         try {
