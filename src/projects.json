@@ -1,0 +1,27 @@
+{
+
+    "cozii": {
+        "name": "Cozii Proptech",
+        "description": "The Cozii project",
+        "file-1": "cozii/cozii/cozii-home.png",
+        "cozii-rent": {
+            "file-1": "cozii/coziirent/coziirent-home.png",
+            "file-2": "cozii/coziirent/coziirent-review.png"
+            }
+        },
+
+    "monography": {
+        "name": "Monography Studio",
+        "description": "The Monography project",
+        "file-1": "monography/home.png",
+        "file-2": "monography/payment.png",
+        "file-3": "monography/photo-selection-and-customization.mp4",
+        "file-4": "monography/strip-quantity.png"
+    },
+
+    "son_of_rand": {
+        "name": "Son of Rand",
+        "description": "The Son of Rand project",
+        "file-1": "son_of_rand/son_of_rand_home_desktop.mp4"
+    }
+}
