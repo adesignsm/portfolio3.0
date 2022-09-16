@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import projects from "../../../projects.json";
 
+import "../../../styles/projects/projects.css";
+
 const Project = () => {
 
     const [projectData, setProjectData] = useState([]);
@@ -15,16 +17,17 @@ const Project = () => {
 
     return (
         <>
-            {Object.keys(projectData).map((data, key) => {
-                return(
-                    <div key = {key}>
-                        <h1> {projectData[data].name} </h1>
-                        <p> {projectData[data].description}</p>
-                        {/* images data */}
-                        {/* dates of completion data */}
-                    </div>
-                )
-            })}
+            <div id = "projects">
+                {Object.keys(projectData).map((data, key) => {
+                    return(
+                        <div key = {key}>
+                            <h1> {projectData[data].name} </h1>
+                            <p> {projectData[data].description}</p>
+                            <p> {projectData[data].date} </p>
+                        </div>
+                    )
+                })}
+            </div>
         </>
     )
 }

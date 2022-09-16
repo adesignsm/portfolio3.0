@@ -1,0 +1,22 @@
+#hero {
+    position: relative;
+    z-index: 1;
+    color: #d1c5ad;
+
+    h1 {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 10rem;
+        font-size: 80px;
+        max-width: 300px;
+        line-height: 70px;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+        min-width: 350px;
+        max-width: 80%;
+        margin-left: 1rem;
+    }
+}
