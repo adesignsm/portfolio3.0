@@ -2,4 +2,40 @@
     position: relative;
     z-index: 1;
     color: #d1c5ad;
+    margin-left: 0;
+    padding-left: 0;
+    min-width: 350px;
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
+
+    h1 {
+        font-size: 30px;
+        color: #E75480;
+    }
+
+    h1, p {
+        margin: 0;
+    }
+}
+
+#projects__inner {
+    div {
+        position: relative;
+        z-index: 2;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(20px);
+        background-color: #1d231580;
+        vertical-align: top;
+    }
+
+    div:nth-child(1) {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    div:nth-child(3) {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
 }

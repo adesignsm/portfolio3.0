@@ -5,7 +5,7 @@ const Projects = () => {
     
     return (
         <>
-            <ul>
+            <ul id = "projects">
                 <Project />
             </ul>
         </>

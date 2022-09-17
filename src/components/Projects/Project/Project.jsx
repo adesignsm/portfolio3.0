@@ -17,7 +17,7 @@ const Project = () => {
 
     return (
         <>
-            <div id = "projects">
+            <div id = "projects__inner">
                 {Object.keys(projectData).map((data, key) => {
                     return(
                         <div key = {key}>
