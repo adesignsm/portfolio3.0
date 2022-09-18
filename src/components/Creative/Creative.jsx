@@ -6,7 +6,8 @@ import "../../styles/creative/creative.css";
 
 const Creative = () => {
 
-    let scene, camera, renderer;
+    let scene, camera, renderer, mesh;
+    let mouse = new THREE.Vector3();
 
     let circle = new THREE.CircleGeometry(15, 40, 16);
     let torus = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -51,7 +52,7 @@ const Creative = () => {
                     color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, 
                     side: THREE.DoubleSide
                 });
-                let mesh = new THREE.Mesh(meshGeo, meshMaterial);
+                mesh = new THREE.Mesh(meshGeo, meshMaterial);
 
                 scene.add(mesh);
 
@@ -66,20 +67,27 @@ const Creative = () => {
         }
 
         populateScreen();
-        renderer.render(scene, camera);
 
-    }
+        const animate = () => {
+            let objects = scene.children;
 
-    const animate = () => {
-        console.log("hit");
+            for (let i = 0; i < objects.length; i++) {
+                console.log(objects[i]);
+                objects[i].rotation.x += 0.002;
+            }
 
-        requestAnimationFrame(animate);
-        initGL();
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+
+        animate();
     }
 
     useEffect(() => {
         initGL();
     });
+
+
 
     return (
         <>
