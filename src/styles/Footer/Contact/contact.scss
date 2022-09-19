@@ -1,0 +1,48 @@
+#contact-section {
+    padding: 1rem 1rem;
+    background-color: hsla(86, 25%, 0%, 0.502);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+#contact-form {
+    padding: 0 1rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem !important;
+    }
+
+    input[type=text], input[type=email], textarea, button {
+        background-color: #1d231580; 
+        border: none;
+        border-radius: 10px;
+        padding: 1rem 1rem;
+        margin-bottom: 0.5rem !important;
+        max-width: 100%;
+        min-width: 230px;
+        margin: 0 auto;
+        color: #E75480;
+        font-family: 'Poppins', sans-serif;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        min-width: 250px !important;
+        width: 100%;
+        font-weight: 550;
+        font-size: 30px;
+    }
+}
+
+#thankyou-box {
+    padding: 1rem 1rem;
+    background-color: hsla(86, 25%, 0%, 0.502);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    font-size: 30px;
+}

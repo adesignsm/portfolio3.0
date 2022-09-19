@@ -1,0 +1,51 @@
+#contact-section {
+  padding: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.502);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+#contact-form {
+  padding: 0 1rem;
+}
+
+#contact-form h1 {
+  text-align: center;
+  margin-bottom: 1rem !important;
+}
+
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea, #contact-form button {
+  background-color: #1d231580;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  margin-bottom: 0.5rem !important;
+  max-width: 100%;
+  min-width: 230px;
+  margin: 0 auto;
+  color: #E75480;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact-form input[type=text]:focus, #contact-form input[type=email]:focus, #contact-form textarea:focus, #contact-form button:focus {
+  outline: none;
+}
+
+#contact-form button {
+  min-width: 250px !important;
+  width: 100%;
+  font-weight: 550;
+  font-size: 30px;
+}
+
+#thankyou-box {
+  padding: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.502);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  text-align: center;
+  font-size: 30px;
+}
+/*# sourceMappingURL=contact.css.map */
