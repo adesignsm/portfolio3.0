@@ -9,7 +9,7 @@ const Creative = () => {
     const [deviceEventSwitch, setDeviceEventSwitch] = useState("");
 
     let scene, camera, renderer, mesh;
-    let mouse = new THREE.Vector2(), touchPoint = new Object();
+    let mouse = new THREE.Vector3(), touchPoint = new Object();
 
     let sphere = new THREE.SphereGeometry(15, 32, 16);
     let torus = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -18,13 +18,33 @@ const Creative = () => {
 
     let spriteProps = {
         count: 70,
+        colours: ["#d1c5ad", "#E75480", `#${Math.floor(Math.random() * 16777215).toString(16)}`],
         geometry: [sphere, torus, capsule, cube],
         xCoords: {xMin: window.innerWidth - (window.innerWidth * 2), xMax: window.innerWidth - (window.innerWidth / 2)},
         yCoords: {yMin: window.innerHeight - (window.innerWidth * 2), yMax: window.innerHeight - (window.innerHeight / 2)},
         zCoords: {zMin: 0, zMax: 100},
+        direction: ["up", "down"]
     };
 
+    const setDeviceAgent = () => {
+        let deviceW = window.innerWidth;
+        setDeviceEventSwitch(deviceW < 600 ? "touch" : "mouse");
+
+        if (deviceEventSwitch === "touch") {
+            console.log("mobile mode");
+        } else {
+            console.log("desktop mode");
+            spriteProps.xCoords.xMin = -100;
+            spriteProps.xCoords.xMax = 100;
+
+            spriteProps.yCoords.yMin = -window.innerHeight;
+            spriteProps.yCoords.yMax = window.innerHeight;
+        }
+    }
+
     const initGL = () => {
+        setDeviceAgent();
+
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.set(0, 0, 150);
@@ -37,14 +57,17 @@ const Creative = () => {
         const populateScreen = () => {
             for (let i = 0; i < spriteProps.count; i++) {
                 let randomMeshIndex = Math.floor(Math.random() * spriteProps.geometry.length);
+                let randomDirectionIndex = Math.floor(Math.random() * spriteProps.direction.length);
+                let randomColourIndex = Math.floor(Math.random() * spriteProps.colours.length)
                 
                 let meshGeo = spriteProps.geometry[randomMeshIndex];
                 let meshMaterial = new THREE.MeshLambertMaterial({
-                    color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, 
+                    color: spriteProps.colours[randomColourIndex], 
                     side: THREE.DoubleSide,
                     wireframe: false
                 });
                 mesh = new THREE.Mesh(meshGeo, meshMaterial);
+                mesh.randomDirection = spriteProps.direction[randomDirectionIndex];
 
                 scene.add(mesh);
 
@@ -65,30 +88,20 @@ const Creative = () => {
         populateScreen();
 
         const animate = () => {
-            console.log(window.innerWidth, window.innerHeight)
             let objects = scene.children;
 
             for (let i = 0; i < objects.length; i++) {
                 objects[i].rotation.x += 0.002;
-                if (deviceEventSwitch === "touch") {
-                    console.log(objects[i].position)
-                } else {
-                    objects[i].position.x += mouse.x;
-                    objects[i].position.y += mouse.y;
 
-                    // if (objects[i].position.x >= window.innerWidth || objects[i].position.y >= window.innerHeight) {
-                    //     console.log("collision");
-                    // }
+                if (objects[i].randomDirection == "up") {
+                    objects[i].position.y += 0.007;
+                } else if (objects[i].randomDirection == "down") {
+                    objects[i].position.y -= 0.007;
                 }
             }
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
-        }
-
-        const setDeviceAgent = () => {
-            let deviceW = window.innerWidth;
-            setDeviceEventSwitch(deviceW < 600 ? "touch" : "mouse");
         }
 
         const onResizeWindow = () => {
@@ -104,17 +117,17 @@ const Creative = () => {
         const onMouseMove = (e) => {
             e.preventDefault();
 
-            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+            // mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+            // mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
 
-            console.log(e.clientX, e.clientY);
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
         }
 
         //event listeners
         window.addEventListener("resize", onResizeWindow, false);
         window.addEventListener("mousemove", onMouseMove, false);
 
-        setDeviceAgent();
         animate();
     }
 
