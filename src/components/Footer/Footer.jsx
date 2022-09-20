@@ -11,6 +11,7 @@ const Footer = () => {
     return (
         <>
             <div id = "footer">
+                <Contact />
                 <div id = "footer-links">
                     <p> Here are some of my links that you can check out. </p>
                     <IconContext.Provider value={{color: "#d1c5ad", size: "2em", className: "social-icons"}}>
@@ -21,7 +22,6 @@ const Footer = () => {
                         </ul>
                     </IconContext.Provider>
                 </div>
-                <Contact />
             </div>
         </>
     )

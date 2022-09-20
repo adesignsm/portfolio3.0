@@ -1,21 +1,25 @@
 {
+    "band_of_devs": {
+        "name": "Band Of Dev's",
+        "date": "August 2022 - Present",
+        "role": "I have a team of developers and designers that help small to medium sized business jumpstart their digital presenece. We specialize in breakig through the outer bounds of front-end creativity when it comes to interactivity."
+    },
 
     "monography": {
-        "name": "Monography Studio",
-        "description": "The Monography project",
-        "date": "April 2022 - Present"
+        "name": "Monography",
+        "date": "April 2022 - Present",
+        "role": "I am currently building their photobooth software while leading a team of developers and designers."
     },
 
     "cozii": {
         "name": "Cozii Proptech",
-        "description": "The Cozii project",
-        "date": "May 2022 - September 2022"
+        "date": "May 2022 - September 2022",
+        "role": "I designed userflows, sitemaps, wireframes, and developed three WordPress websites under Cozii Proptech. I worked closely with designers and stakeholders during the SDLC's of each website. I worked withing the WordPress CMS, with PHP, MySQL, and JavaScript."
         },
 
     "son_of_rand": {
         "name": "Son of Rand",
-        "description": "The Son of Rand project",
         "date": "October 2021 - June 2022",
-        "file-1": "son_of_rand/son_of_rand_home_desktop.mp4"
+        "role": "Helped the Son Of Rand development team with creative development. I was tasked with adding interactivity to the home page by adding navigations items that were draggable objects. I worked with shopify.liquid and JavaScript for this project."
     }
 }

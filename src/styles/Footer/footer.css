@@ -56,4 +56,22 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  #footer {
+    max-width: 80%;
+  }
+  #footer-links {
+    margin-top: 1rem;
+    float: right;
+  }
+  #footer-links ul {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  #footer-links ul li {
+    margin-right: 2rem;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

@@ -29,13 +29,25 @@
   vertical-align: top;
 }
 
+#projects__inner div p.date {
+  color: rgba(200, 200, 200, 0.85);
+}
+
 #projects__inner div:nth-child(1) {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-#projects__inner div:nth-child(3) {
+#projects__inner div:nth-child(4) {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  #projects {
+    margin-top: 10vw;
+    max-width: 80%;
+    zoom: 2;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

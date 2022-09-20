@@ -22,8 +22,8 @@ const Project = () => {
                     return(
                         <div key = {key}>
                             <h1> {projectData[data].name} </h1>
-                            <p> {projectData[data].description}</p>
-                            <p> {projectData[data].date} </p>
+                            <h4 className="date"> {projectData[data].date} </h4>
+                            <p> {projectData[data].role} </p>
                         </div>
                     )
                 })}

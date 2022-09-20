@@ -6,8 +6,10 @@ const Hero = () => {
     return (
         <>
             <div id = "hero">
-                <h1> Akash Mulye.</h1>
-                <h2> Engineering creative, and interactive web apps for all types of businesses. </h2>
+                <div id = "hero-container">
+                    <h1> Akash Mulye.</h1>
+                    <h2> Engineering creative, and interactive web apps for all types of businesses. </h2>
+                </div>
             </div>
         </>
     )

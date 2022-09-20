@@ -65,11 +65,21 @@ const Creative = () => {
         populateScreen();
 
         const animate = () => {
+            console.log(window.innerWidth, window.innerHeight)
             let objects = scene.children;
 
             for (let i = 0; i < objects.length; i++) {
                 objects[i].rotation.x += 0.002;
-                //check for mobile or desktop with deviceAgent
+                if (deviceEventSwitch === "touch") {
+                    console.log(objects[i].position)
+                } else {
+                    objects[i].position.x += mouse.x;
+                    objects[i].position.y += mouse.y;
+
+                    // if (objects[i].position.x >= window.innerWidth || objects[i].position.y >= window.innerHeight) {
+                    //     console.log("collision");
+                    // }
+                }
             }
 
             renderer.render(scene, camera);
