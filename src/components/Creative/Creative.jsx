@@ -135,8 +135,6 @@ const Creative = () => {
         initGL();
     });
 
-
-
     return (
         <>
             <div id = "canvas-bg"></div> 

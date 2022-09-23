@@ -1,0 +1,29 @@
+#loading #hero-container {
+  display: none;
+}
+
+#loading #hero-container h1 {
+  max-width: 230px;
+  min-width: 20px;
+  margin: 0 auto;
+  padding-top: 150px;
+  line-height: 1;
+}
+
+#loading #hero-container h2 {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #hero-container h1 {
+    padding-top: 50px !important;
+    margin: 0 !important;
+    zoom: 1.5;
+  }
+  #hero-container h2 {
+    margin-top: 10rem !important;
+    margin-bottom: 5rem;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=loading.css.map */

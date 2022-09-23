@@ -21,7 +21,11 @@ const Project = () => {
                 {Object.keys(projectData).map((data, key) => {
                     return(
                         <div key = {key}>
-                            <h1> {projectData[data].name} </h1>
+                            <h1> 
+                                <a href = {projectData[data].link}>
+                                    {projectData[data].name}
+                                </a> 
+                            </h1>
                             <h4 className="date"> {projectData[data].date} </h4>
                             <p> {projectData[data].role} </p>
                         </div>

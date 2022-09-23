@@ -32,10 +32,11 @@
             font-size: 130px;
             line-height: 110px;
             max-width: 20%;
+            zoom: 1 !important;
         }
 
         h2 {
-            margin-top: 1rem;
+            margin-top: 1rem !important;
             text-align: left;
             max-width: 60%;
             zoom: 1.5;

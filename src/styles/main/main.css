@@ -3,6 +3,19 @@ body, html {
   background-color: #101020;
 }
 
+a {
+  text-decoration: none;
+  color: #E75480;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+#ready-state-components {
+  display: none;
+}
+
 #footer {
   color: #d1c5ad !important;
 }

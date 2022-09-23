@@ -45,7 +45,6 @@
 
 @media only screen and (min-width: 768px) {
   #projects {
-    margin-top: 10vw;
     max-width: 80%;
     zoom: 2;
   }
