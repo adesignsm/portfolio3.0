@@ -29,4 +29,11 @@
             margin-left: 0;
         }
     }
+
+    #loading-blob canvas {
+        position: absolute;
+        height: 100%;
+        width: 1920px;
+        z-index: 999;
+    }
  }
