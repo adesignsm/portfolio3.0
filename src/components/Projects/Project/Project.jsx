@@ -28,6 +28,8 @@ const Project = () => {
                             </h1>
                             <h4 className="date"> {projectData[data].date} </h4>
                             <p> {projectData[data].role} </p>
+                            <br></br>
+                            <p>{projectData[data].stack}</p>
                         </div>
                     )
                 })}

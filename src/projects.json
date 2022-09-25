@@ -1,28 +1,31 @@
 {
-    "band_of_devs": {
-        "name": "Band Of Dev's",
-        "date": "August 2022 - Present",
-        "role": "I have a team of developers and designers that help small to medium sized business jumpstart their digital presenece. We specialize in breaking through the outer bounds of front-end creativity when it comes to user interaction."
-    },
-
     "monography": {
         "name": "Monography",
         "link": "https://monography.ca/",
         "date": "April 2022 - Present",
-        "role": "I am currently building their photobooth software while leading a team of developers and designers."
+        "role": "I am currently building their photobooth software while leading a team of developers and designers.",
+        "stack": "Technologies: Node.js, Electron.js, JavaScript, TypeScript, Firebase Cloud Storage"
     },
 
     "cozii": {
         "name": "Cozii Proptech",
         "link": "https://coziirent.com/",
         "date": "May 2022 - September 2022",
-        "role": "I designed userflows, sitemaps, wireframes, and developed three WordPress websites under Cozii Proptech. I worked closely with designers and stakeholders during the SDLC's of each website. I worked within the WordPress CMS, with PHP, MySQL, and JavaScript."
+        "role": "I designed userflows, sitemaps, wireframes, and developed three WordPress websites under Cozii Proptech. I worked closely with designers and stakeholders during the SDLC's of each website. I worked within the WordPress CMS, with PHP, MySQL, and JavaScript.",
+        "stack": "Technologies: PHP, MySQL, JavaScript, WordPress"
         },
 
     "son_of_rand": {
         "name": "Son of Rand",
         "link": "https://sonofrand.com/",
         "date": "October 2021 - June 2022",
-        "role": "Helped the Son Of Rand development team with creative development. I was tasked with adding interactivity to the home page by adding navigations items that were draggable objects. I worked with shopify.liquid and JavaScript for this project."
+        "role": "Helped the Son Of Rand development team with creative development. I was tasked with adding interactivity to the home page by adding navigations items that were draggable objects. I worked with shopify.liquid and JavaScript for this project.",
+        "stack": "Technologies: JavaScript, Shopify Liquid template language, Matter.js, JQuery"
+    },
+
+    "band_of_devs": {
+        "name": "Band Of Dev's",
+        "date": "August 2022 - Present",
+        "role": "I have a team of developers and designers that help small to medium sized business jumpstart their digital presenece. We specialize in breaking through the outer bounds of front-end creativity when it comes to user interaction."
     }
 }
